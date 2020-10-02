@@ -42,6 +42,7 @@ pipeline {
     post {
         always {
             echo 'JENKINS PIPELINE'
+            archiveArtifacts artifacts: 'code-coverage-maven-jacoco.jar', onlyIfSuccessful: true
         }
         success {
             echo 'JENKINS PIPELINE SUCCESSFUL'
