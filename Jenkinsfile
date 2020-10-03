@@ -42,7 +42,7 @@ pipeline {
     post {
         always {
             echo 'JENKINS PIPELINE'
-            archiveArtifacts artifacts: 'target/'*', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'target/*.*', onlyIfSuccessful: true
         }
         success {
             echo 'JENKINS PIPELINE SUCCESSFUL'
