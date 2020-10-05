@@ -22,7 +22,7 @@ pipeline {
          stage("SonarQube analysis") {
             steps {
               withSonarQubeEnv('project-1') {
-                  bat 'mvn sonar:sonar -Dsonar.analysis.mode=preview -Dsonar.issuesReport.html.enable=true'
+                  bat 'mvn sonar:sonar -Dsonar.issuesReport.html.enable=true'
               }
             }
           }
